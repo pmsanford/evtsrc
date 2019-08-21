@@ -22,7 +22,7 @@ def poll_results():
         else:
             yield ":non-event comment - to keep connection alive\n\n"
         counter += 1
-        time.sleep(10)
+        time.sleep(1)
 
 @app.route("/rest/get_results")
 def generate_results():
