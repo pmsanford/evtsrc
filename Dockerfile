@@ -12,6 +12,5 @@ FROM tiangolo/uwsgi-nginx-flask:python3.6
 ADD . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
-COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 ADD custom_nginx.conf /nginx-config/nginx.conf
 COPY --from=npmbuild /build/dist /frontend

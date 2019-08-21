@@ -1,7 +1,7 @@
-import gevent
 from flask import Flask, Response, jsonify
 import random
 import json
+import time
 
 app = Flask(__name__)
 
@@ -22,7 +22,7 @@ def poll_results():
         else:
             yield ":non-event comment - to keep connection alive\n\n"
         counter += 1
-        gevent.sleep(1)
+        time.sleep(10)
 
 @app.route("/rest/get_results")
 def generate_results():
