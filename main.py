@@ -1,6 +1,4 @@
 import gevent
-from gevent import monkey
-monkey.patch_all()
 from flask import Flask, Response, jsonify
 import random
 import json
